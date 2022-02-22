@@ -1,0 +1,25 @@
+spring:
+  main:
+    banner-mode: "OFF"
+    cloud-platform: kubernetes
+  profiles:
+    active: dev
+  security:
+    user:
+      name: "ac92fad6c"
+      password: "c2712584c"
+
+server:
+  port: 8000
+  compression:
+    enabled: true
+    mime-types: application/json
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: metrics,info,health
+
+springfox.documentation.open-api.v3.path: /schema

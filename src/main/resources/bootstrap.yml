@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ms-test--factoriaf5-testing
+  cloud:
+    config:
+      enabled: false
