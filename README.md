@@ -11,6 +11,19 @@ Sample used in Adevinta Spain's [Factoria F5](https://factoriaf5.org/) mastercla
 * Clone/fork this repo or create your own using [spring initializr](https://start.spring.io/#!type=gradle-project&language=kotlin&platformVersion=2.6.3&packaging=jar&jvmVersion=11&groupId=com.adevinta.factoriaf5&artifactId=Testing&name=Testing&description=Testing%20demo%20for%20FactoriaF5&packageName=com.adevinta.mstestfactoriaf5testing&dependencies=cloud-config-client)
 * [Setup Continuous Integration using Github Actions](.github/workflows/gradle.yml)
 
+Review the implementation:
+* [FibonacciController](src/main/java/com/adevinta/mstestfactoriaf5testing/infrastructure/controller/FibonacciController.java) => [FibonacciAdder](src/main/java/com/adevinta/mstestfactoriaf5testing/domain/FibonacciAdder.java) => [FibonacciList](src/main/java/com/adevinta/mstestfactoriaf5testing/domain/FibonacciList.java) ( [FibonacciListFunctional](src/main/java/com/adevinta/mstestfactoriaf5testing/domain/FibonacciListFunctional.java) or [FibonacciListImperative](src/main/java/com/adevinta/mstestfactoriaf5testing/domain/FibonacciListImperative.java) )
+* [FibonacciConfiguration](src/main/java/com/adevinta/mstestfactoriaf5testing/infrastructure/configuration/FibonacciConfiguration.java)
+
+Review the unit tests:
+* [FibonacciControllerTest](src/test/java/com/adevinta/mstestfactoriaf5testing/infrastructure/controller/FibonacciControllerTest.java)
+* [FibonacciAdderTest](src/test/java/com/adevinta/mstestfactoriaf5testing/domain/FibonacciAdderTest.java)
+* [FibonacciListFunctionalTest](src/test/java/com/adevinta/mstestfactoriaf5testing/domain/FibonacciListFunctionalTest.java)
+* [FibonacciListImperativeTest](src/test/java/com/adevinta/mstestfactoriaf5testing/domain/FibonacciListImperativeTest.java)
+
+Review the integration test:
+* [ApplicationTest](src/integrationTest/java/com/adevinta/mstestfactoriaf5testing/infrastructure/ApplicationTest.java)
+
 ## Run
 
 ```
