@@ -2,8 +2,6 @@ package com.adevinta.mstestfactoriaf5testing.domain;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
@@ -19,11 +17,11 @@ class FibonacciAdderTest {
   @Test
   void shouldAddFibonacciNumbers() {
     var number = 10L;
-    doReturn(asList(0L, 1L, 1L, 2L, 3L, 5L, 8L, 13L, 21L, 34L))
+    doReturn(asList(1L, 2L, 3L, 4L))
           .when(fibonacciList).get(number);
 
-    var fibonacciAdder = new FibonacciAdder();
+    var fibonacciAdder = new FibonacciAdder(fibonacciList);
     assertThat(fibonacciAdder.add(number))
-          .isEqualTo(143L);
+          .isEqualTo(10L);
   }
 }

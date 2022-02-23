@@ -15,6 +15,8 @@ Sample used in Adevinta Spain's [Factoria F5](https://factoriaf5.org/) mastercla
 
 ```
 ./gradlew bootRun
+
+curl -w'\n' -v http://localhost:8000/fibonacci/10
 ```
 
 ## Test

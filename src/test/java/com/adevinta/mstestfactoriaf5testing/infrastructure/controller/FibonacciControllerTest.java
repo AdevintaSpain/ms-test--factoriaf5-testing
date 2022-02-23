@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.mockito.Mockito.doReturn;
@@ -22,7 +23,7 @@ class FibonacciControllerTest {
   @Test
   void shouldAddFibonacciNumbers() throws Exception {
     var number = 10L;
-    var result = 143L;
+    var result = 1234L;
     doReturn(result).when(fibonacciAdder).add(number);
 
     mockMvc.perform(get("/fibonacci/" + number))
