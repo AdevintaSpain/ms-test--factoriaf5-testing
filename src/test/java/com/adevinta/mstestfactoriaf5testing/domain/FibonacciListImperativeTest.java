@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import static java.util.Collections.emptyList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class FibonacciListImperativeTest {
@@ -21,7 +20,7 @@ class FibonacciListImperativeTest {
 
   public static Stream<Arguments> shouldGetFibonacciListTestCases() {
     return Stream.of(
-          Arguments.of(0L, emptyList()),
+          Arguments.of(0L, List.of()),
           Arguments.of(1L, List.of(0L)),
           Arguments.of(2L, List.of(0L, 1L)),
           Arguments.of(3L, List.of(0L, 1L, 1L)),
