@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: ms-test--factoriaf5-testing
   main:
     banner-mode: "OFF"
     cloud-platform: kubernetes
